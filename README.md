@@ -19,4 +19,12 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-# Vuejs-Signup-form
+## Reference links: 
+ProjectSetup:  [medium doc](https://medium.com/codingthesmartway-com-blog/vue-js-2-quickstart-tutorial-2017-246195cfbdd2)
+
+API usage: [Using Axios to Consume APIs Official docs](https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html)
+
+Medium link for API calling: [how to make AJAX & API calls with Vue JS](https://itnext.io/anyway-heres-how-to-do-ajax-api-calls-with-vue-js-e71e57d5cf12)
+
+
+
