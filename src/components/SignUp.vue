@@ -165,7 +165,7 @@
             password: this.form.password
         }
         // Instead of this timeout, here you can call your API
-        console.log("user details: ",data)
+        console.log("signup details: ",data)
         window.setTimeout(() => {
           this.lastUser = `${data.firstName} ${data.lastName}`
           this.userSaved = true
