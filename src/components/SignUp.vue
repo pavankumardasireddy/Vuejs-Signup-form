@@ -87,6 +87,7 @@
     maxLength,
     password
   } from 'vuelidate/lib/validators'
+  import userApi from '@/services/api/user'
 
   export default {
     name: 'signUp',
@@ -153,7 +154,7 @@
         this.form.cpassword = null 
         window.setTimeout(() => {
           router.push({ name:"home" });
-        }, 1500)
+        }, 2000)
       },
       saveUser () {
         this.sending = true
@@ -166,12 +167,17 @@
         }
         // Instead of this timeout, here you can call your API
         console.log("signup details: ",data)
-        window.setTimeout(() => {
-          this.lastUser = `${data.firstName} ${data.lastName}`
-          this.userSaved = true
-          this.sending = false
-          this.clearForm()
-        }, 1500)
+        userApi.registerUser(data)
+        .then(result => {
+          console.log("Success", result)
+          window.setTimeout(() => {
+            this.lastUser = `${data.firstName} ${data.lastName}`
+            this.userSaved = true
+            this.sending = false
+            this.clearForm()
+          }, 1500)
+        })
+        .catch(error => console.log(error))
       },
       validateUser () {
         this.$v.$touch()
